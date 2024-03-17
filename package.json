@@ -1,0 +1,31 @@
+{
+  "name": "fsi-genai",
+  "version": "0.1.0",
+  "bin": {
+    "fsi-genai": "bin/fsi-genai.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "format": "prettier --write \"lib/**/*.ts\" \"bin/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.16",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "aws-cdk": "2.128.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3",
+    "prettier": "^2.3.2",
+    "prettier-plugin-organize-imports": "^3.2.3"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "^1.32.2",
+    "aws-cdk-lib": "2.128.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
