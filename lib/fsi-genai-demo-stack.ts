@@ -1,6 +1,5 @@
 import * as cdk from "aws-cdk-lib";
 import { Code, Repository } from "aws-cdk-lib/aws-codecommit";
-import { SubnetType, Vpc } from "aws-cdk-lib/aws-ec2";
 import {
   Effect,
   ManagedPolicy,
@@ -21,11 +20,6 @@ export class FsiGenaiDemoStack extends cdk.Stack {
         path.join(__dirname, "fsidemo-assets/"),
         "develop"
       ),
-    });
-
-    const defaultVpc = Vpc.fromLookup(this, "VPC", { isDefault: true });
-    const vpcSubnets = defaultVpc.selectSubnets({
-      subnetType: SubnetType.PUBLIC,
     });
 
     const sagemakerExecutionRole = new Role(this, "SageMakerExecutionRole", {
